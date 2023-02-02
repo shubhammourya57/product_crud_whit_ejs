@@ -1,0 +1,43 @@
+<%-include('head.ejs')%>
+
+    <div class="container mt-3">
+        <h2>product form</h2>
+        <form action="/product/addProduct" method="post" enctype="multipart/form-data">
+            <div class="mb-3 mt-3">
+                <label for="pn">product Name</label>
+                <input type="text" class="form-control" id="pn" placeholder="Enter productName" name="pn">
+            </div>
+            <div class="mb-3">
+                <label for="pp">Product price</label>
+                <input type="number" class="form-control" id="pp" placeholder="Enter price" name="pp">
+            </div>
+    
+    <div class="mb-3">
+        <label for="pq">Product quantity</label>
+        <input type="number" class="form-control" id="pq" placeholder="Enter price" name="pq">
+    </div>
+    <div class="mb-3">
+        <label for="pd">Product description</label>
+        <input type="text" class="form-control" id="pd" placeholder="Enter price" name="pd">
+    </div>
+
+    <div class="mb-3">
+        <label for="pd">Product image</label>
+        <input type="file" class="form-control"  name="productImage">
+    </div>
+
+
+    <div class="form-check mb-3">
+        <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+    </div>
+
+    
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    </div>
+
+
+<%-include('footer.ejs')%>

@@ -1,0 +1,29 @@
+<%- include('head.ejs')%>
+
+<form action="/product/editProduct" method="post">
+    <div class="mb-3 mt-3">
+        <input type="hidden" name="product_id" value="<%=editData._id %>"
+      <label for="pn">product name:</label>
+      <input type="text" class="form-control" id="pname" value="<%=editData.productName %>" placeholder="product name" name="pn">
+    </div>
+    <div class="mb-3">
+      <label for="pq">product quantity:</label>
+      <input type="number" class="form-control" id="pqnt" value="<%=editData.productQuantity %>" placeholder="pqnt" name="pq">
+    </div>
+    <div class="mb-3">
+        <label for="pp">product price:</label>
+        <input type="number" class="form-control" id="pprice" value="<%=editData.productPrice %>" placeholder="pprice" name="pp">
+      </div>
+      <div class="mb-3">
+        <label for="pd">product description:</label>
+        <input type="text" class="form-control" id="pdes" value="<%=editData.productDescription %>" placeholder="type here" name="pd">
+      </div>
+    <div class="form-check mb-3">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+<%- include('footer.ejs')%>
