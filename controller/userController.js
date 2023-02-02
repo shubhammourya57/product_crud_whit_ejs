@@ -9,6 +9,7 @@ exports.getLogin = async(req, res) =>{
     }
 }
 
+
 exports.getSignup = async(req, res) =>{
     try{
         return res.render("signup", {title:"Signup",isAuth:req.session.isLogin})
