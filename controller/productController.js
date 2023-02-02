@@ -70,6 +70,8 @@ exports.editProduct = async (req,res) => {
        let productQuantity =req.body.pQ;
        let productDescription =req.body.pd;
       
+
+       
        const editData = await productModel.findByIdAndUpdate({_id:product_id},{
         productName:productName,
         productPrice:productPrice,
